@@ -1,11 +1,12 @@
-package strategy;
-
-import java.io.File;
-
 /**
  * Created by mamour on 02/07/16
  * 17:16.
  */
+
+package strategy;
+
+import java.io.File;
+
 public class CompressionRar implements Compression {
     public void compressFile(File file) {
         /**
