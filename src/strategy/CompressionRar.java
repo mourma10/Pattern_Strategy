@@ -11,6 +11,6 @@ public class CompressionRar implements Compression {
         /**
          * Code Compression RAR
          */
-        System.out.println("Compression RAR de " + file.getName() + "terminee! ");
+        System.out.println("Compression RAR de " + file.getName() + " terminee! ");
     }
 }

@@ -11,6 +11,6 @@ public class CompressionZip implements Compression {
         /**
          * Code Compression ZIP
          */
-        System.out.println("Compression ZIP de " + file.getName() + "terminee! ");
+        System.out.println("Compression ZIP de " + file.getName() + " terminee! ");
     }
 }
