@@ -4,24 +4,24 @@
  */
 
 import context.CompressionContext;
-import strategy.CompressionRar;
-import strategy.CompressionZip;
 
 import java.io.File;
+import java.util.Scanner;
 
-public class Client {
-    public static void main(String[] args) {
-        CompressionContext context = new CompressionContext();
-        File dirFile = new File("/home/mamour/Pictures");
-        File[] files = dirFile.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                if ((float) file.length() / (float) (1000 * 1000) <= 3.0)
-                    context.setCompression(new CompressionZip());
-                else
-                    context.setCompression(new CompressionRar());
-                context.createArchive(file);
-            }
-        }
+class Client {
+    CompressionContext context;
+
+    void setContext(CompressionContext context) {
+        this.context = context;
+    }
+
+    File[] getFiles() {
+        File dirFile;
+        Scanner sc = new Scanner(System.in);
+        String chemin;
+        System.out.print("\n Donner le chemin du dossier : ");
+        chemin = sc.nextLine();
+        dirFile = new File(chemin);
+        return dirFile.listFiles();
     }
 }
